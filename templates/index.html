@@ -3,44 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>مشروع عليون المتقدم</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css">
+    <title>مشروعي الإبداعي | Alioun</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        body { background-color: #0f172a; color: white; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
-        .hero { padding: 100px 0; text-align: center; }
-        .card { background: #1e293b; border: none; color: white; transition: 0.3s; }
-        .card:hover { transform: translateY(-10px); }
-        .btn-primary { background-color: #3b82f6; border: none; }
+        @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap');
+        body { font-family: 'Cairo', sans-serif; background-color: #0f172a; color: #f8fafc; }
+        .glass { background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); }
+        .hero-gradient { background: radial-gradient(circle at center, #1e293b 0%, #0f172a 100%); }
     </style>
 </head>
-<body>
-    <div class="container">
-        <header class="hero">
-            <h1 class="display-3">مرحباً بك في عالم عليون</h1>
-            <p class="lead">هذا المشروع تم بناؤه بدقة واحترافية عالية.</p>
-            <button class="btn btn-primary btn-lg" onclick="checkStatus()">فحص حالة النظام</button>
-        </header>
-        <div class="row mt-5">
-            <div class="col-md-4">
-                <div class="card p-4">
-                    <h3>السرعة</h3>
-                    <p>أداء فائق واستجابة لحظية في كل العمليات.</p>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card p-4">
-                    <h3>الأمان</h3>
-                    <p>معايير تشفير عالمية لحماية بياناتك.</p>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card p-4">
-                    <h3>التصميم</h3>
-                    <p>واجهة مستخدم عصرية ومريحة للعين.</p>
-                </div>
-            </div>
+<body class="hero-gradient min-h-screen">
+    <nav class="p-6 flex justify-between items-center glass sticky top-0 z-50">
+        <div class="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-emerald-400">ALIOUN ARCHITECT</div>
+        <div class="space-x-reverse space-x-6">
+            <a href="#" class="hover:text-blue-400 transition">الرئيسية</a>
+            <a href="#" class="hover:text-blue-400 transition">المعرض</a>
+            <button class="bg-blue-600 hover:bg-blue-700 px-6 py-2 rounded-full transition">اتصل بنا</button>
         </div>
-    </div>
+    </nav>
+
+    <main class="container mx-auto px-6 py-12">
+        <section class="text-center mb-20">
+            <h1 class="text-6xl font-bold mb-6">مستقبل التصميم <span class="text-blue-500">والذكاء الاصطناعي</span></h1>
+            <p class="text-gray-400 text-xl max-w-2xl mx-auto">تجربة فريدة تمزج بين الفن الهندسي وأحدث تقنيات البرمجة تحت إشراف Alioun.</p>
+        </section>
+
+        <section class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="glass p-4 rounded-2xl transition-transform hover:scale-105">
+                <img src="/assets/img_1768126024731.png" alt="Design 1" class="rounded-xl mb-4 w-full h-64 object-cover">
+                <h3 class="text-xl font-bold">تصميم معماري ذكي</h3>
+            </div>
+            <div class="glass p-4 rounded-2xl transition-transform hover:scale-105">
+                <img src="/assets/img_1768127012862.png" alt="Design 2" class="rounded-xl mb-4 w-full h-64 object-cover">
+                <h3 class="text-xl font-bold">تفاعل مستخدم متطور</h3>
+            </div>
+            <div class="glass p-4 rounded-2xl transition-transform hover:scale-105">
+                <img src="/assets/img_1768124919768.png" alt="Design 3" class="rounded-xl mb-4 w-full h-64 object-cover">
+                <h3 class="text-xl font-bold">تكامل البيانات</h3>
+            </div>
+        </section>
+    </main>
+
+    <footer class="text-center py-10 text-gray-500 border-t border-white/10 mt-20">
+        <p>© 2024 تم التطوير بواسطة Alioun - Elite Software Architect</p>
+    </footer>
+
     <script src="/static/js/script.js"></script>
 </body>
 </html>
