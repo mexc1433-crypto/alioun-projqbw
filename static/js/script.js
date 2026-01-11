@@ -1,13 +1,24 @@
-function checkStatus() {
-    fetch('/api/status')
-        .then(response => response.json())
-        .then(data => {
-            alert('حالة النظام: ' + data.status + '\nالإصدار: ' + data.version);
-        })
-        .catch(error => {
-            console.error('Error:', error);
-            alert('فشل الاتصال بالخادم');
-        });
-}
+document.addEventListener('DOMContentLoaded', () => {
+    console.log('Alioun Architect System Initialized...');
+    
+    const cards = document.querySelectorAll('.glass');
+    const observerOptions = {
+        threshold: 0.1
+    };
 
-console.log('Alioun System Initialized...');
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+            }
+        });
+    }, observerOptions);
+
+    cards.forEach(card => {
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(20px)';
+        card.style.transition = 'all 0.6s ease-out';
+        observer.observe(card);
+    });
+});
