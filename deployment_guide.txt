@@ -1,0 +1,4 @@
+1. Install Python 3.x
+2. Run: pip install flask
+3. Start the app: python flask_app.py
+4. Open browser at http://127.0.0.1:5000
