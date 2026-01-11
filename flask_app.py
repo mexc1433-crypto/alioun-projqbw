@@ -1,4 +1,5 @@
-from flask import Flask, render_template, jsonify
+from flask import Flask, render_template, send_from_directory
+import os
 
 app = Flask(__name__)
 
@@ -6,9 +7,9 @@ app = Flask(__name__)
 def index():
     return render_template('index.html')
 
-@app.route('/api/status')
-def status():
-    return jsonify({"status": "online", "version": "1.0.0"})
+@app.route('/assets/<path:path>')
+def send_assets(path):
+    return send_from_directory('assets', path)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True, port=5000)
